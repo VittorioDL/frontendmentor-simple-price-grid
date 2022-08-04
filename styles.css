@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+    /* TYPOGRAPHY */
+    --font-size: 16px;
+    --font-family: 'Karla', sans-serif;
+    --fw-400: 400;
+    --fw-700: 700;
+
+    /* PRIMARY COLORS */
+    --clr-pr-cyan: hsl(179, 62%, 43%);
+    --clr-pr-light-cyan: hsl(179, 47%, 52%);
+    --clr-pr-yellow: hsl(71, 73%, 54%);
+
+    /* NEUTRAL COLORS */
+    --clr-nt-light-grey: hsl(204, 43%, 93%);
+    --clr-nt-gray-blue: hsl(218, 22%, 67%);
+}
+
+html, body{
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+.container{
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: var(--clr-nt-light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD STYLING */
+.price-card{
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0px 5px 25px -3px rgba(0,0,0,0.15);
+}
+
+/* CARD GRID */
+.card-top{
+    grid-column: span 2;
+    grid-row: 1;
+    background-color: #fff;
+}
+.card-bottom-left{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: var(--clr-pr-cyan);
+}
+.card-bottom-right{
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--clr-pr-light-cyan);
+}
+
+/* ----CARD STYLING---- */
+.card{
+    padding: 2.5rem 3rem 3rem 3rem;
+}
+
+/* TOP CARD */
+.card-top-title{
+    color: var(--clr-pr-cyan);
+    font-weight: var(--fw-700);
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+}
+.card-top-subtitle{
+    color: var(--clr-pr-yellow);
+    font-weight: var(--fw-700);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+.card-top-text{
+    color: var(--clr-nt-gray-blue);
+    font-weight: var(--fw-400);
+    font-size: 1.125rem;
+}
+
+/* BOTTOM LEFT CARD */
+.card-bl-title{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+.card-bl-price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.card-bl-price-value{
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: var(--fw-700);
+}
+.card-bl-price-text{
+    font-size: 1.1rem;
+    color: #fff;
+    opacity: 0.5;
+}
+.card-bl-text{
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.card-bl-button{
+    width: 100%;
+    height: 60px;
+    border-radius: 7px;
+    border-style: none;
+    background-color: var(--clr-pr-yellow);
+    color: #fff;
+    font-weight: var(--fw-700);
+    font-size: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
+}
+
+/* BOTTOM RIGHT CARD */
+.card-br-title{
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+.card-br-text{
+    color: var(--clr-nt-light-grey);
+    opacity: 0.9;
+}
+
+@media (max-width: 450px) {
+    .price-card{
+        grid-template-columns: 1fr;
+    }
+    .card-top{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .card-bottom-left{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .card-bottom-right{
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
